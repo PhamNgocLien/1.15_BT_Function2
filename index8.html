@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Change element's index</title>
+</head>
+<body>
+<script>
+    let str = prompt("Please input text");
+    let arr = str.split("");
+
+    function change(array) {
+        let newArr = array.reverse();
+        return newArr;
+    }
+    let result = change(arr);
+    alert("Đảo ngược chuỗi thành: " + result.join(""));
+</script>
+</body>
+</html>

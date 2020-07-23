@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find min</title>
+</head>
+<body>
+<script>
+    let number1 = prompt("Please input number 1");
+    let number2 = prompt("Please input number 2");
+    let number3 = prompt("Please input number 3");
+    let str = number1 + number2 + number3;
+    let arr = str.split("");
+    let arr2 = arr.sort(function (a,b) {
+        return a-b;
+    })
+    alert("Min là: " + arr2[0]);
+</script>
+</body>
+</html>

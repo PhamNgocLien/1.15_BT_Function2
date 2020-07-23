@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Circle</title>
+</head>
+<body>
+<script>
+    let number = +prompt("Hãy nhập bán kính hình tròn");
+    function perimeter(r) {
+        let chuVi = 2*r*3.14;
+        return chuVi;
+    }
+
+    function acreage(r) {
+        let dienTich = r*r*3.14;
+        return dienTich;
+    }
+
+    let resultChuVi = perimeter(number);
+    let resultDienTich = acreage(number);
+    alert("Với bán kính là " + number + " thì chu vi hình tròn là: " + resultChuVi + " và diện tích hình tròn là: " + resultDienTich);
+</script>
+</body>
+</html>

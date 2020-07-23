@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find character</title>
+</head>
+<body>
+<script>
+    let str = prompt("Please input text");
+    let arr = str.split("");
+    let chrt = prompt("Please input a character");
+
+    function isInArr(array, character) {
+        let flag = false;
+        if (array.indexOf(character) != -1) {
+            flag = true;
+        }
+        return flag;
+    }
+
+    let resultFlag = isInArr(arr, chrt);
+
+    function countElement(array, character) {
+        let count = []
+        let idx = array.indexOf(character);
+        while (idx != -1) {
+            count.push(idx);
+            idx = array.indexOf(character, idx + 1);
+        }
+        return count;
+    }
+    let resultCount = countElement(arr,chrt).length;
+
+    if (resultFlag) {
+        alert("Số lần xuất hiện của " + chrt + " là: " + resultCount);
+    } else {
+        alert("Không tồn tại " + chrt + " trong chuỗi");
+    }
+
+</script>
+</body>
+</html>

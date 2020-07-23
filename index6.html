@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Is integer?</title>
+</head>
+<body>
+<script>
+    let number = prompt("Please input a number");
+    let arr = number.split("");
+    function isInteger(inputNumber) {
+        let flag = true;
+        if (arr.indexOf(".") == -1) {
+            flag = true;
+        } else {
+            flag = false;
+        }
+        return flag;
+    }
+    let result = isInteger(number);
+    function moreZero(inputNumber) {
+        let flag2 = true;
+        if (parseInt(number) > 0) {
+            flag2 = true;
+        } else {
+            flag2 = false;
+        }
+        return flag2;
+    }
+    let result2 = moreZero(number);
+
+    if (result && result2) {
+        alert(number + " là số nguyên dương");
+    } else {
+        alert(number + " không là số nguyên dương");
+    }
+</script>
+</body>
+</html>
